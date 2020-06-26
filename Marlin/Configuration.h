@@ -495,9 +495,14 @@
   //#define  DEFAULT_Kd 68.07
 
   // Modded CR-10 tuned for 200C w/ E3D V6 Hotend
-  #define  DEFAULT_Kp 34.78
-  #define  DEFAULT_Ki 3.66
-  #define  DEFAULT_Kd 82.62
+  //#define  DEFAULT_Kp 34.78
+  //#define  DEFAULT_Ki 3.66
+  //#define  DEFAULT_Kd 82.62
+
+  // Modded CR-10 tuned for 240C w/ E3D Titan Aero Hotend
+  #define DEFAULT_Kp 27.34
+  #define DEFAULT_Ki 2.10
+  #define DEFAULT_Kd 88.92
 
   // Modded CR-10 tuned for 220C w/ E3D Titan Aero Hotend & Copper Heater Block
   //#define  DEFAULT_Kp 32.22
