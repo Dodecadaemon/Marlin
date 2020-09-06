@@ -483,30 +483,15 @@
 
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
 
-  // Stock CR-10 tuned for 70C
-  //#define  DEFAULT_Kp 22.57
-  //#define  DEFAULT_Ki 1.72
-  //#define  DEFAULT_Kd 73.96
+  // Modded CR-10 tuned for 220C w/ E3D Titan Aero Hotend & Titanium Heat Break
+  #define DEFAULT_Kp 28.74
+  #define DEFAULT_Ki 2.23
+  #define DEFAULT_Kd 92.60
 
-  // Modded CR-10 tuned for 210C w/ Microswiss Hotend
-  //#define  DEFAULT_Kp 24.99
-  //#define  DEFAULT_Ki 2.29
-  //#define  DEFAULT_Kd 68.07
-
-  // Modded CR-10 tuned for 200C w/ E3D V6 Hotend
-  //#define  DEFAULT_Kp 34.78
-  //#define  DEFAULT_Ki 3.66
-  //#define  DEFAULT_Kd 82.62
-
-  // Modded CR-10 tuned for 240C w/ E3D Titan Aero Hotend
-  #define DEFAULT_Kp 27.34
-  #define DEFAULT_Ki 2.10
-  #define DEFAULT_Kd 88.92
-
-  // Modded CR-10 tuned for 220C w/ E3D Titan Aero Hotend & Copper Heater Block
-  //#define  DEFAULT_Kp 32.22
-  //#define  DEFAULT_Ki 2.77
-  //#define  DEFAULT_Kd 93.72
+  // Modded CR-10 tuned for 250C w/ E3D Titan Aero Hotend & Titanium Heat Break
+  //#define DEFAULT_Kp 29.09
+  //#define DEFAULT_Ki 2.21
+  //#define DEFAULT_Kd 95.73
 
 #endif // PIDTEMP
 
@@ -543,10 +528,15 @@
   //#define MIN_BED_POWER 0
   //#define PID_BED_DEBUG // Sends debug data to the serial port.
 
-  //Stock CR-10 Bed Tuned for 70C
-  #define  DEFAULT_bedKp 426.68
-  #define  DEFAULT_bedKi 78.92
-  #define  DEFAULT_bedKd 576.71
+  // Insulated CR-10 Bed Tuned for 60C
+  #define DEFAULT_bedKp 162.01
+  #define DEFAULT_bedKi 32.37
+  #define DEFAULT_bedKd 540.58
+
+  // Insulated CR-10 Bed Tuned for 70C
+  //#define DEFAULT_bedKp 388.00
+  //#define DEFAULT_bedKi 77.37
+  //#define DEFAULT_bedKd 1297.21
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #endif // PIDTEMPBED
@@ -964,7 +954,7 @@
  *
  * Specify a Probe position as { X, Y, Z }
  */
-#define NOZZLE_TO_PROBE_OFFSET { 15, -50, 0 }
+#define NOZZLE_TO_PROBE_OFFSET { 15, -50, -1.30 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
